@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		156A37BA1CB2F0E400D2D336 /* CheckTLSComposeBackEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156A37B91CB2F0E400D2D336 /* CheckTLSComposeBackEnd.swift */; };
+		1516A5E71CC54AF800F970FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15F129A01CC54A9E006AD695 /* Foundation.framework */; };
+		156A37BA1CB2F0E400D2D336 /* CTComposeBackEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156A37B91CB2F0E400D2D336 /* CTComposeBackEnd.swift */; };
 		15D437F21CB2C3330046CF76 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D437F11CB2C3330046CF76 /* SwiftyJSON.swift */; };
 		15F6B6D51CB2F4EF00FFE7C2 /* CodeInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F6B6D41CB2F4EF00FFE7C2 /* CodeInjector.swift */; };
 		58F516831CAD1C1B000B7544 /* CheckTLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F516821CAD1C1B000B7544 /* CheckTLS.swift */; };
@@ -35,8 +36,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		156A37B91CB2F0E400D2D336 /* CheckTLSComposeBackEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckTLSComposeBackEnd.swift; sourceTree = "<group>"; };
+		156A37B91CB2F0E400D2D336 /* CTComposeBackEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTComposeBackEnd.swift; sourceTree = "<group>"; };
 		15D437F11CB2C3330046CF76 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		15F129A01CC54A9E006AD695 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		15F6B6D41CB2F4EF00FFE7C2 /* CodeInjector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeInjector.swift; sourceTree = "<group>"; };
 		58A5E2891CAD17120059ECE4 /* CheckTLS.mailbundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckTLS.mailbundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A5E28C1CAD17120059ECE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1516A5E71CC54AF800F970FF /* Foundation.framework in Frameworks */,
 				58F5168F1CAD236A000B7544 /* AppleScriptObjC.framework in Frameworks */,
 				58F5168D1CAD2361000B7544 /* ScriptingBridge.framework in Frameworks */,
 				58F5168B1CAD2359000B7544 /* CoreFoundation.framework in Frameworks */,
@@ -89,7 +92,7 @@
 				58A5E28C1CAD17120059ECE4 /* Info.plist */,
 				58F516821CAD1C1B000B7544 /* CheckTLS.swift */,
 				15F6B6D41CB2F4EF00FFE7C2 /* CodeInjector.swift */,
-				156A37B91CB2F0E400D2D336 /* CheckTLSComposeBackEnd.swift */,
+				156A37B91CB2F0E400D2D336 /* CTComposeBackEnd.swift */,
 				58F516911CAD5BA0000B7544 /* ServerCheck.swift */,
 				15D437F11CB2C3330046CF76 /* SwiftyJSON.swift */,
 				58F516811CAD1C1B000B7544 /* CheckTLS-Bridging-Header.h */,
@@ -100,6 +103,7 @@
 		58F516901CAD236F000B7544 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				15F129A01CC54A9E006AD695 /* Foundation.framework */,
 				58F5168E1CAD236A000B7544 /* AppleScriptObjC.framework */,
 				58F5168C1CAD2361000B7544 /* ScriptingBridge.framework */,
 				58F5168A1CAD2359000B7544 /* CoreFoundation.framework */,
@@ -178,7 +182,7 @@
 			files = (
 				15D437F21CB2C3330046CF76 /* SwiftyJSON.swift in Sources */,
 				58F516831CAD1C1B000B7544 /* CheckTLS.swift in Sources */,
-				156A37BA1CB2F0E400D2D336 /* CheckTLSComposeBackEnd.swift in Sources */,
+				156A37BA1CB2F0E400D2D336 /* CTComposeBackEnd.swift in Sources */,
 				58F516921CAD5BA0000B7544 /* ServerCheck.swift in Sources */,
 				15F6B6D51CB2F4EF00FFE7C2 /* CodeInjector.swift in Sources */,
 			);

@@ -21,7 +21,7 @@ class CheckTLS: NSObject {
 
         NSLog("[CheckTLS] Dispatching!")
         dispatch_once(&Static.token) {
-            CheckTLSComposeBackEnd.initialize()
+            CTComposeBackEnd.initialize()
         }
         
         NSLog("[CheckTLS] Initialized!")

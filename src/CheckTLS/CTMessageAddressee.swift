@@ -1,16 +1,15 @@
 //
-//  CheckTLSComposeBackEnd.swift
+//  CTMessageAddressee.swift
 //  CheckTLS
 //
+//  Created by v on 18/04/16.
 //  Copyright © 2016 vivami. All rights reserved.
 //
 
-import ScriptingBridge
-import AppKit
-import Cocoa
 import Foundation
 
-class CheckTLSComposeBackEnd: NSObject {
+
+class CTMessageAddressee: NSObject {
     
     override class func initialize() {
         
@@ -20,17 +19,24 @@ class CheckTLSComposeBackEnd: NSObject {
         
         dispatch_once(&Static.token) {
             let injector: CodeInjector = CodeInjector.instance
-            injector.injectMethod(self, clazz: OrigClasses.ComposeBackEnd)
-            NSLog("[CheckTLS] CheckTLSComposeBackEnd initialized!")
+            injector.injectMethod(self, clazz: OrigClasses.MFMessageAddressee)
+            NSLog("[CheckTLS] CTMessageAddressee initialized!")
         }
         
     }
     
     // test function
-    dynamic func swizzSetMessagePriority(obj: NSObject) {
+    dynamic func swizzAddress(obj: NSObject) {
         NSLog("[CheckTLS] You changed priority of the message!")
-
+        //let x = MFMessageAddressee()
+        //let _ = self.valueForKey("recipients") as! MFMessageAddressee
+        
+        self.valueForKey("_address")
+        
+        NSLog(String(self.valueForKey("toRecipients")))
+        
         let injector: CodeInjector = CodeInjector.instance
         injector.useOrigMethod(self, selector: Selectors.setMessagePriority, arg: obj)
     }
+
 }

@@ -8,23 +8,22 @@
 
 import Foundation
 
+enum CheckStatus: Int {
+    case TLS_ENCRYTPED = 1, UNCERTAIN, UNENCRYPTED, ERROR
+}
+
 class ServerCheck {
-    
-    enum CheckStatus: Int {
-        case TLS_ENCRYTPED = 1, UNCERTAIN, UNENCRYPTED, ERROR
-    }
+
     
     let sslToolsAddr = "https://ssl-tools.net/mailservers/"
     let jsonFormat = "?format=json"
+
+    static let instance = ServerCheck.init()
     
-    var server: String = ""
+    init() {}
     
-    init(s: String) {
-        server = s
-    }
-    
-    func check() -> CheckStatus {
-        if let jsonData = getJSON() {
+    func check(server: String) -> CheckStatus {
+        if let jsonData = getJSON(server) {
             let result = checkStatus(jsonData)
             NSLog("[CheckTLS] \(server) is \(result)")
             return result
@@ -33,8 +32,8 @@ class ServerCheck {
         return CheckStatus.ERROR
     }
     
-    func getJSON() -> NSData? {
-        let addr = sslToolsAddr + server + jsonFormat
+    func getJSON(s: String) -> NSData? {
+        let addr = sslToolsAddr + s + jsonFormat
         guard let url = NSURL(string: addr) else {
             NSLog("[CheckTLS] Error: cannot create URL")
             return nil
